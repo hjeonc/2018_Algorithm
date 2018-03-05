@@ -10,7 +10,7 @@ from datetime import datetime
 
 #**********Algorithms to test speed**********
 
-def BubbleSort(data): 
+def BubbleSort(data):
   for i in range(0, len(data)-1, 1):
     for j in range(0, i, 1):
       if data[j] > data[j+1]:
@@ -32,7 +32,7 @@ def SequentialSearch(data, item):
       return '{item} is found.'.format(item=item)
 
 def BinarySearch(data, item):
-  head = 0 
+  head = 0
   tail = len(data) - 1
   while True:
     if tail > head:
@@ -48,7 +48,7 @@ def BinarySearch(data, item):
 #*******************Calculate****************
 
 #generate a random array of # len elements b/w 1 to 10000, not unique
-def gen_ran_arr(len): 
+def gen_ran_arr(len):
   temp = list(random.sample(range(1, 10000), len))
   return temp
 
@@ -60,18 +60,17 @@ def choose_ran_item(array):
 #returns the run time of the function
 #option: 1 - sorting 2 - search 3 - maze
 def runtime(option, i, function_to_run):
-  import timeit
-  data = gen_ran_arr(i)
-  if option >=4 and option <=6:
-    data.sort()
+    import timeit
+    data = gen_ran_arr(i)
     item = choose_ran_item(data)
 
-  if option <= 3:
     start = timeit.default_timer()
-    function_to_run(data)
+    (data)
     end = timeit.default_timer()
+    BubbleSort_time = end - start
 
-  elif option >=4 and option <= 6:
+
+
     start = timeit.default_timer()
     function_to_run(data, item)
     end = timeit.default_timer()
